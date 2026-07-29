@@ -225,7 +225,7 @@
       "name": "Foco industrial",
       "source": {
         "type": "geojson",
-        "url": "https://raw.githubusercontent.com/TU_USUARIO_GITHUB/TU_REPOSITORIO/main/fuentes_acusticas.geojson",
+        "url": "https://raw.githubusercontent.com/alberto-lopardo/mapa-ruido-urbano/main/fuentes_acusticas.geojson",
         "filter": [
           "==",
           [
