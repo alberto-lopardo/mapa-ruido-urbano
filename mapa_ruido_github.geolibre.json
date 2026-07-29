@@ -23,7 +23,7 @@
       "name": "Nivel Leq (dBA)",
       "source": {
         "type": "geotiff",
-        "url": "https://raw.githubusercontent.com/TU_USUARIO_GITHUB/TU_REPOSITORIO/main/mapa_ruido_Leq.tif"
+        "url": "https://raw.githubusercontent.com/alberto-lopardo/mapa-ruido-urbano/main/mapa_ruido_Leq.tif"
       },
       "visible": true,
       "opacity": 0.85,
