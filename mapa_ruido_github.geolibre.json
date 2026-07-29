@@ -1,0 +1,256 @@
+{
+  "version": "1.0",
+  "name": "Mapa de Ruido Urbano - ISO 9613-2",
+  "description": "Nivel equivalente Leq ponderado A - Trama urbana sintetica",
+  "author": "Alberto Lopardo",
+  "crs": "EPSG:3857",
+  "center": [
+    300.0,
+    250.0
+  ],
+  "zoom": 14,
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "source": "openfreemap",
+      "visible": true,
+      "opacity": 1.0
+    },
+    {
+      "id": "mapa_ruido_Leq",
+      "type": "raster",
+      "name": "Nivel Leq (dBA)",
+      "source": {
+        "type": "geotiff",
+        "url": "https://raw.githubusercontent.com/TU_USUARIO_GITHUB/TU_REPOSITORIO/main/mapa_ruido_Leq.tif"
+      },
+      "visible": true,
+      "opacity": 0.85,
+      "colormap": {
+        "type": "discrete",
+        "stops": [
+          {
+            "value": 25,
+            "color": "#FFFFFF",
+            "label": "< 45 dBA"
+          },
+          {
+            "value": 45,
+            "color": "#A8D8A8",
+            "label": "45-50 dBA"
+          },
+          {
+            "value": 50,
+            "color": "#5CB85C",
+            "label": "50-55 dBA"
+          },
+          {
+            "value": 55,
+            "color": "#F0E68C",
+            "label": "55-60 dBA"
+          },
+          {
+            "value": 60,
+            "color": "#FFD700",
+            "label": "60-65 dBA"
+          },
+          {
+            "value": 65,
+            "color": "#FFA500",
+            "label": "65-70 dBA"
+          },
+          {
+            "value": 70,
+            "color": "#FF6347",
+            "label": "70-75 dBA"
+          },
+          {
+            "value": 75,
+            "color": "#DC143C",
+            "label": "75-80 dBA"
+          },
+          {
+            "value": 80,
+            "color": "#8B0000",
+            "label": "> 80 dBA"
+          }
+        ],
+        "nodata": -9999,
+        "nodata_color": "#00000000"
+      }
+    },
+    {
+      "id": "isofonas_poligonos",
+      "type": "fill",
+      "name": "Isofonas (poligonos)",
+      "source": {
+        "type": "geojson",
+        "url": "https://raw.githubusercontent.com/TU_USUARIO_GITHUB/TU_REPOSITORIO/main/isofonas_poligonos.geojson"
+      },
+      "visible": true,
+      "style": {
+        "type": "simple",
+        "paint": {
+          "fill-color": [
+            "get",
+            "fill"
+          ],
+          "fill-opacity": [
+            "get",
+            "fill-opacity"
+          ],
+          "fill-outline-color": [
+            "get",
+            "stroke"
+          ]
+        }
+      }
+    },
+    {
+      "id": "isofonas_lineas",
+      "type": "line",
+      "name": "Isofonas (lineas)",
+      "source": {
+        "type": "geojson",
+        "url": "https://raw.githubusercontent.com/TU_USUARIO_GITHUB/TU_REPOSITORIO/main/isofonas_lineas.geojson"
+      },
+      "visible": true,
+      "style": {
+        "type": "simple",
+        "paint": {
+          "line-color": [
+            "get",
+            "stroke"
+          ],
+          "line-width": [
+            "get",
+            "stroke-width"
+          ],
+          "line-opacity": [
+            "get",
+            "stroke-opacity"
+          ]
+        }
+      }
+    },
+    {
+      "id": "edificios",
+      "type": "fill",
+      "name": "Edificios",
+      "source": {
+        "type": "geojson",
+        "url": "https://raw.githubusercontent.com/TU_USUARIO_GITHUB/TU_REPOSITORIO/main/edificios.geojson"
+      },
+      "visible": true,
+      "style": {
+        "type": "simple",
+        "paint": {
+          "fill-color": [
+            "get",
+            "fill"
+          ],
+          "fill-opacity": [
+            "get",
+            "fill-opacity"
+          ],
+          "fill-outline-color": [
+            "get",
+            "stroke"
+          ]
+        }
+      }
+    },
+    {
+      "id": "zonas_excedencia",
+      "type": "fill",
+      "name": "Zonas de excedencia normativa",
+      "source": {
+        "type": "geojson",
+        "url": "https://raw.githubusercontent.com/TU_USUARIO_GITHUB/TU_REPOSITORIO/main/zonas_excedencia.geojson"
+      },
+      "visible": true,
+      "style": {
+        "type": "simple",
+        "paint": {
+          "fill-color": [
+            "get",
+            "fill"
+          ],
+          "fill-opacity": [
+            "get",
+            "fill-opacity"
+          ],
+          "fill-outline-color": [
+            "get",
+            "stroke"
+          ]
+        }
+      }
+    },
+    {
+      "id": "fuente_carretera",
+      "type": "line",
+      "name": "Carretera principal",
+      "source": {
+        "type": "geojson",
+        "url": "https://raw.githubusercontent.com/TU_USUARIO_GITHUB/TU_REPOSITORIO/main/fuentes_acusticas.geojson",
+        "filter": [
+          "==",
+          [
+            "get",
+            "tipo_fuente"
+          ],
+          "lineal"
+        ]
+      },
+      "visible": true,
+      "style": {
+        "type": "simple",
+        "paint": {
+          "line-color": [
+            "get",
+            "stroke"
+          ],
+          "line-width": [
+            "get",
+            "stroke-width"
+          ]
+        }
+      }
+    },
+    {
+      "id": "fuente_industrial",
+      "type": "circle",
+      "name": "Foco industrial",
+      "source": {
+        "type": "geojson",
+        "url": "https://raw.githubusercontent.com/TU_USUARIO_GITHUB/TU_REPOSITORIO/main/fuentes_acusticas.geojson",
+        "filter": [
+          "==",
+          [
+            "get",
+            "tipo_fuente"
+          ],
+          "puntual"
+        ]
+      },
+      "visible": true,
+      "style": {
+        "type": "simple",
+        "paint": {
+          "circle-color": [
+            "get",
+            "marker-color"
+          ],
+          "circle-radius": [
+            "get",
+            "marker-size"
+          ],
+          "circle-stroke-color": "#FFFFFF",
+          "circle-stroke-width": 2
+        }
+      }
+    }
+  ]
+}
