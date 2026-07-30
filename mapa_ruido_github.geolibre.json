@@ -3,8 +3,8 @@
   "name": "Mapa de Ruido Urbano - ISO 9613-2",
   "mapView": {
     "center": [
-      300.0,
-      250.0
+      -3.74,
+      40.39
     ],
     "zoom": 14,
     "bearing": 0,
@@ -20,9 +20,9 @@
       "type": "raster",
       "source": {
         "type": "geotiff",
-        "url": "https://raw.githubusercontent.com/TU_USUARIO_GITHUB/TU_REPOSITORIO/main/mapa_ruido_Leq.tif"
+        "url": "https://raw.githubusercontent.com/alberto-lopardo/mapa-ruido-urbano/main/mapa_ruido_Leq.tif"
       },
-      "visible": true,
+      "visible": false,
       "opacity": 0.85,
       "style": {
         "rasterOpacity": 0.85
@@ -34,7 +34,7 @@
       "type": "geojson",
       "source": {
         "type": "geojson",
-        "url": "https://raw.githubusercontent.com/TU_USUARIO_GITHUB/TU_REPOSITORIO/main/isofonas_poligonos.geojson"
+        "url": "https://raw.githubusercontent.com/alberto-lopardo/mapa-ruido-urbano/main/isofonas_poligonos.geojson"
       },
       "visible": true,
       "opacity": 1.0,
@@ -51,7 +51,7 @@
       "type": "geojson",
       "source": {
         "type": "geojson",
-        "url": "https://raw.githubusercontent.com/TU_USUARIO_GITHUB/TU_REPOSITORIO/main/isofonas_lineas.geojson"
+        "url": "https://raw.githubusercontent.com/alberto-lopardo/mapa-ruido-urbano/main/isofonas_lineas.geojson"
       },
       "visible": true,
       "opacity": 1.0,
@@ -67,7 +67,7 @@
       "type": "geojson",
       "source": {
         "type": "geojson",
-        "url": "https://raw.githubusercontent.com/TU_USUARIO_GITHUB/TU_REPOSITORIO/main/edificios.geojson"
+        "url": "https://raw.githubusercontent.com/alberto-lopardo/mapa-ruido-urbano/main/edificios.geojson"
       },
       "visible": true,
       "opacity": 1.0,
@@ -84,7 +84,7 @@
       "type": "geojson",
       "source": {
         "type": "geojson",
-        "url": "https://raw.githubusercontent.com/TU_USUARIO_GITHUB/TU_REPOSITORIO/main/zonas_excedencia.geojson"
+        "url": "https://raw.githubusercontent.com/alberto-lopardo/mapa-ruido-urbano/main/zonas_excedencia.geojson"
       },
       "visible": true,
       "opacity": 1.0,
@@ -101,7 +101,7 @@
       "type": "geojson",
       "source": {
         "type": "geojson",
-        "url": "https://raw.githubusercontent.com/TU_USUARIO_GITHUB/TU_REPOSITORIO/main/fuentes_acusticas.geojson",
+        "url": "https://raw.githubusercontent.com/alberto-lopardo/mapa-ruido-urbano/main/fuentes_acusticas.geojson",
         "filter": [
           "==",
           [
@@ -125,7 +125,7 @@
       "type": "geojson",
       "source": {
         "type": "geojson",
-        "url": "https://raw.githubusercontent.com/TU_USUARIO_GITHUB/TU_REPOSITORIO/main/fuentes_acusticas.geojson",
+        "url": "https://raw.githubusercontent.com/alberto-lopardo/mapa-ruido-urbano/main/fuentes_acusticas.geojson",
         "filter": [
           "==",
           [
