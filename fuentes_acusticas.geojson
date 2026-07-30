@@ -19,8 +19,6 @@
       "properties": {
         "nombre": "Carretera principal",
         "tipo_fuente": "lineal",
-        "Lw_dB_m": 88.0,
-        "altura_emision_m": 0.5,
         "stroke": "#555555",
         "stroke-width": 4.0,
         "stroke-opacity": 1.0
@@ -39,8 +37,6 @@
       "properties": {
         "nombre": "Foco industrial",
         "tipo_fuente": "puntual",
-        "Lw_dB": 115.0,
-        "altura_emision_m": 5.0,
         "marker-color": "#8B0000",
         "marker-size": 12,
         "marker-opacity": 1.0

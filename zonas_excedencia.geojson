@@ -1001,8 +1001,8 @@
         ]
       },
       "properties": {
-        "umbral_dBA": 70.0,
-        "descripcion": "Zona con excedencia > 70 dBA",
+        "umbral_dBA": 70,
+        "descripcion": "Zona > 70 dBA",
         "area_m2": 8652.2,
         "fill": "#FF6347",
         "fill-opacity": 0.35,
@@ -2164,8 +2164,8 @@
         ]
       },
       "properties": {
-        "umbral_dBA": 65.0,
-        "descripcion": "Zona con excedencia > 65 dBA",
+        "umbral_dBA": 65,
+        "descripcion": "Zona > 65 dBA",
         "area_m2": 22818.88,
         "fill": "#FFA500",
         "fill-opacity": 0.35,
@@ -4181,8 +4181,8 @@
         ]
       },
       "properties": {
-        "umbral_dBA": 55.0,
-        "descripcion": "Zona con excedencia > 55 dBA",
+        "umbral_dBA": 55,
+        "descripcion": "Zona > 55 dBA",
         "area_m2": 58640.04,
         "fill": "#F0E68C",
         "fill-opacity": 0.35,
