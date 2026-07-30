@@ -18,75 +18,12 @@
       "opacity": 1.0
     },
     {
-      "id": "mapa_ruido_Leq",
-      "type": "raster",
-      "name": "Nivel Leq (dBA)",
-      "source": {
-        "type": "geotiff",
-        "url": "https://raw.githubusercontent.com/alberto-lopardo/mapa-ruido-urbano/main/mapa_ruido_Leq.tif"
-      },
-      "visible": true,
-      "opacity": 0.85,
-      "colormap": {
-        "type": "discrete",
-        "stops": [
-          {
-            "value": 25,
-            "color": "#FFFFFF",
-            "label": "< 45 dBA"
-          },
-          {
-            "value": 45,
-            "color": "#A8D8A8",
-            "label": "45-50 dBA"
-          },
-          {
-            "value": 50,
-            "color": "#5CB85C",
-            "label": "50-55 dBA"
-          },
-          {
-            "value": 55,
-            "color": "#F0E68C",
-            "label": "55-60 dBA"
-          },
-          {
-            "value": 60,
-            "color": "#FFD700",
-            "label": "60-65 dBA"
-          },
-          {
-            "value": 65,
-            "color": "#FFA500",
-            "label": "65-70 dBA"
-          },
-          {
-            "value": 70,
-            "color": "#FF6347",
-            "label": "70-75 dBA"
-          },
-          {
-            "value": 75,
-            "color": "#DC143C",
-            "label": "75-80 dBA"
-          },
-          {
-            "value": 80,
-            "color": "#8B0000",
-            "label": "> 80 dBA"
-          }
-        ],
-        "nodata": -9999,
-        "nodata_color": "#00000000"
-      }
-    },
-    {
       "id": "isofonas_poligonos",
       "type": "fill",
       "name": "Isofonas (poligonos)",
       "source": {
         "type": "geojson",
-        "url": "https://raw.githubusercontent.com/TU_USUARIO_GITHUB/TU_REPOSITORIO/main/isofonas_poligonos.geojson"
+        "url": "https://raw.githubusercontent.com/alberto-lopardo/mapa-ruido-urbano/main/isofonas_poligonos.geojson"
       },
       "visible": true,
       "style": {
@@ -113,7 +50,7 @@
       "name": "Isofonas (lineas)",
       "source": {
         "type": "geojson",
-        "url": "https://raw.githubusercontent.com/TU_USUARIO_GITHUB/TU_REPOSITORIO/main/isofonas_lineas.geojson"
+        "url": "https://raw.githubusercontent.com/alberto-lopardo/mapa-ruido-urbano/main/isofonas_lineas.geojson"
       },
       "visible": true,
       "style": {
@@ -140,7 +77,7 @@
       "name": "Edificios",
       "source": {
         "type": "geojson",
-        "url": "https://raw.githubusercontent.com/TU_USUARIO_GITHUB/TU_REPOSITORIO/main/edificios.geojson"
+        "url": "https://raw.githubusercontent.com/alberto-lopardo/mapa-ruido-urbano/main/edificios.geojson"
       },
       "visible": true,
       "style": {
@@ -167,7 +104,7 @@
       "name": "Zonas de excedencia normativa",
       "source": {
         "type": "geojson",
-        "url": "https://raw.githubusercontent.com/TU_USUARIO_GITHUB/TU_REPOSITORIO/main/zonas_excedencia.geojson"
+        "url": "https://raw.githubusercontent.com/alberto-lopardo/mapa-ruido-urbano/main/zonas_excedencia.geojson"
       },
       "visible": true,
       "style": {
@@ -194,7 +131,7 @@
       "name": "Carretera principal",
       "source": {
         "type": "geojson",
-        "url": "https://raw.githubusercontent.com/TU_USUARIO_GITHUB/TU_REPOSITORIO/main/fuentes_acusticas.geojson",
+        "url": "https://raw.githubusercontent.com/alberto-lopardo/mapa-ruido-urbano/main/fuentes_acusticas.geojson",
         "filter": [
           "==",
           [
