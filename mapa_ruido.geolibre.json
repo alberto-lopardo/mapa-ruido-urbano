@@ -20,7 +20,7 @@
       "type": "raster",
       "source": {
         "type": "geotiff",
-        "url": "https://raw.githubusercontent.com/TU_USUARIO_GITHUB/TU_REPOSITORIO/main/mapa_ruido_Leq.tif"
+        "url": "./mapa_ruido_Leq.tif"
       },
       "visible": true,
       "opacity": 0.85,
@@ -34,7 +34,7 @@
       "type": "geojson",
       "source": {
         "type": "geojson",
-        "url": "https://raw.githubusercontent.com/TU_USUARIO_GITHUB/TU_REPOSITORIO/main/isofonas_poligonos.geojson"
+        "url": "./isofonas_poligonos.geojson"
       },
       "visible": true,
       "opacity": 1.0,
@@ -51,7 +51,7 @@
       "type": "geojson",
       "source": {
         "type": "geojson",
-        "url": "https://raw.githubusercontent.com/TU_USUARIO_GITHUB/TU_REPOSITORIO/main/isofonas_lineas.geojson"
+        "url": "./isofonas_lineas.geojson"
       },
       "visible": true,
       "opacity": 1.0,
@@ -67,7 +67,7 @@
       "type": "geojson",
       "source": {
         "type": "geojson",
-        "url": "https://raw.githubusercontent.com/TU_USUARIO_GITHUB/TU_REPOSITORIO/main/edificios.geojson"
+        "url": "./edificios.geojson"
       },
       "visible": true,
       "opacity": 1.0,
@@ -84,7 +84,7 @@
       "type": "geojson",
       "source": {
         "type": "geojson",
-        "url": "https://raw.githubusercontent.com/TU_USUARIO_GITHUB/TU_REPOSITORIO/main/zonas_excedencia.geojson"
+        "url": "./zonas_excedencia.geojson"
       },
       "visible": true,
       "opacity": 1.0,
@@ -101,7 +101,7 @@
       "type": "geojson",
       "source": {
         "type": "geojson",
-        "url": "https://raw.githubusercontent.com/TU_USUARIO_GITHUB/TU_REPOSITORIO/main/fuentes_acusticas.geojson",
+        "url": "./fuentes_acusticas.geojson",
         "filter": [
           "==",
           [
@@ -125,7 +125,7 @@
       "type": "geojson",
       "source": {
         "type": "geojson",
-        "url": "https://raw.githubusercontent.com/TU_USUARIO_GITHUB/TU_REPOSITORIO/main/fuentes_acusticas.geojson",
+        "url": "./fuentes_acusticas.geojson",
         "filter": [
           "==",
           [
