@@ -4,9 +4,9 @@
   "mapView": {
     "center": [
       -3.74,
-      40.39
+      40.367
     ],
-    "zoom": 14,
+    "zoom": 13,
     "bearing": 0,
     "pitch": 0
   },
@@ -14,20 +14,6 @@
   "basemapVisible": true,
   "basemapOpacity": 1.0,
   "layers": [
-    {
-      "id": "mapa_ruido_Leq",
-      "name": "Nivel Leq (dBA)",
-      "type": "raster",
-      "source": {
-        "type": "geotiff",
-        "url": "https://raw.githubusercontent.com/alberto-lopardo/mapa-ruido-urbano/main/mapa_ruido_Leq.tif"
-      },
-      "visible": false,
-      "opacity": 0.85,
-      "style": {
-        "rasterOpacity": 0.85
-      }
-    },
     {
       "id": "isofonas_poligonos",
       "name": "Isofonas (poligonos)",
@@ -101,16 +87,16 @@
       "type": "geojson",
       "source": {
         "type": "geojson",
-        "url": "https://raw.githubusercontent.com/alberto-lopardo/mapa-ruido-urbano/main/fuentes_acusticas.geojson",
-        "filter": [
-          "==",
-          [
-            "get",
-            "tipo_fuente"
-          ],
-          "lineal"
-        ]
+        "url": "https://raw.githubusercontent.com/alberto-lopardo/mapa-ruido-urbano/main/fuentes_acusticas.geojson"
       },
+      "filter": [
+        "==",
+        [
+          "get",
+          "tipo_fuente"
+        ],
+        "lineal"
+      ],
       "visible": true,
       "opacity": 1.0,
       "style": {
@@ -125,16 +111,16 @@
       "type": "geojson",
       "source": {
         "type": "geojson",
-        "url": "https://raw.githubusercontent.com/alberto-lopardo/mapa-ruido-urbano/main/fuentes_acusticas.geojson",
-        "filter": [
-          "==",
-          [
-            "get",
-            "tipo_fuente"
-          ],
-          "puntual"
-        ]
+        "url": "https://raw.githubusercontent.com/alberto-lopardo/mapa-ruido-urbano/main/fuentes_acusticas.geojson"
       },
+      "filter": [
+        "==",
+        [
+          "get",
+          "tipo_fuente"
+        ],
+        "puntual"
+      ],
       "visible": true,
       "opacity": 1.0,
       "style": {
