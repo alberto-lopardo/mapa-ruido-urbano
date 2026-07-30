@@ -1,134 +1,87 @@
 {
-  "version": "1.0",
+  "version": "0.2.0",
   "name": "Mapa de Ruido Urbano - ISO 9613-2",
-  "description": "Nivel equivalente Leq ponderado A - Trama urbana sintetica",
-  "author": "Alberto Lopardo",
-  "crs": "EPSG:3857",
-  "center": [
-    300.0,
-    250.0
-  ],
-  "zoom": 14,
+  "mapView": {
+    "center": [300.0, 250.0],
+    "zoom": 14,
+    "bearing": 0,
+    "pitch": 0
+  },
+  "basemapStyleUrl": "https://demotiles.maplibre.com/style.json",
+  "basemapVisible": true,
+  "basemapOpacity": 1.0,
   "layers": [
     {
-      "id": "background",
-      "type": "background",
-      "source": "openfreemap",
-      "visible": true,
-      "opacity": 1.0
-    },
-    {
       "id": "isofonas_poligonos",
-      "type": "fill",
       "name": "Isofonas (poligonos)",
+      "type": "geojson",
       "source": {
         "type": "geojson",
         "url": "https://raw.githubusercontent.com/alberto-lopardo/mapa-ruido-urbano/main/isofonas_poligonos.geojson"
       },
       "visible": true,
+      "opacity": 1.0,
       "style": {
-        "type": "simple",
-        "paint": {
-          "fill-color": [
-            "get",
-            "fill"
-          ],
-          "fill-opacity": [
-            "get",
-            "fill-opacity"
-          ],
-          "fill-outline-color": [
-            "get",
-            "stroke"
-          ]
-        }
+        "fillColor": "#A8D8A8",
+        "fillOpacity": 0.65,
+        "strokeColor": "#888888",
+        "strokeWidth": 0.5
       }
     },
     {
       "id": "isofonas_lineas",
-      "type": "line",
       "name": "Isofonas (lineas)",
+      "type": "geojson",
       "source": {
         "type": "geojson",
         "url": "https://raw.githubusercontent.com/alberto-lopardo/mapa-ruido-urbano/main/isofonas_lineas.geojson"
       },
       "visible": true,
+      "opacity": 1.0,
       "style": {
-        "type": "simple",
-        "paint": {
-          "line-color": [
-            "get",
-            "stroke"
-          ],
-          "line-width": [
-            "get",
-            "stroke-width"
-          ],
-          "line-opacity": [
-            "get",
-            "stroke-opacity"
-          ]
-        }
+        "strokeColor": "#5CB85C",
+        "strokeWidth": 2.0,
+        "strokeOpacity": 0.9
       }
     },
     {
       "id": "edificios",
-      "type": "fill",
       "name": "Edificios",
+      "type": "geojson",
       "source": {
         "type": "geojson",
         "url": "https://raw.githubusercontent.com/alberto-lopardo/mapa-ruido-urbano/main/edificios.geojson"
       },
       "visible": true,
+      "opacity": 1.0,
       "style": {
-        "type": "simple",
-        "paint": {
-          "fill-color": [
-            "get",
-            "fill"
-          ],
-          "fill-opacity": [
-            "get",
-            "fill-opacity"
-          ],
-          "fill-outline-color": [
-            "get",
-            "stroke"
-          ]
-        }
+        "fillColor": "#BFC5CC",
+        "fillOpacity": 0.85,
+        "strokeColor": "#4A4A4A",
+        "strokeWidth": 0.8
       }
     },
     {
       "id": "zonas_excedencia",
-      "type": "fill",
       "name": "Zonas de excedencia normativa",
+      "type": "geojson",
       "source": {
         "type": "geojson",
         "url": "https://raw.githubusercontent.com/alberto-lopardo/mapa-ruido-urbano/main/zonas_excedencia.geojson"
       },
       "visible": true,
+      "opacity": 1.0,
       "style": {
-        "type": "simple",
-        "paint": {
-          "fill-color": [
-            "get",
-            "fill"
-          ],
-          "fill-opacity": [
-            "get",
-            "fill-opacity"
-          ],
-          "fill-outline-color": [
-            "get",
-            "stroke"
-          ]
-        }
+        "fillColor": "#FFA500",
+        "fillOpacity": 0.35,
+        "strokeColor": "#FFA500",
+        "strokeWidth": 1.5
       }
     },
     {
       "id": "fuente_carretera",
-      "type": "line",
       "name": "Carretera principal",
+      "type": "geojson",
       "source": {
         "type": "geojson",
         "url": "https://raw.githubusercontent.com/alberto-lopardo/mapa-ruido-urbano/main/fuentes_acusticas.geojson",
@@ -142,24 +95,17 @@
         ]
       },
       "visible": true,
+      "opacity": 1.0,
       "style": {
-        "type": "simple",
-        "paint": {
-          "line-color": [
-            "get",
-            "stroke"
-          ],
-          "line-width": [
-            "get",
-            "stroke-width"
-          ]
-        }
+        "strokeColor": "#555555",
+        "strokeWidth": 4.0,
+        "strokeOpacity": 1.0
       }
     },
     {
       "id": "fuente_industrial",
-      "type": "circle",
       "name": "Foco industrial",
+      "type": "geojson",
       "source": {
         "type": "geojson",
         "url": "https://raw.githubusercontent.com/alberto-lopardo/mapa-ruido-urbano/main/fuentes_acusticas.geojson",
@@ -173,20 +119,12 @@
         ]
       },
       "visible": true,
+      "opacity": 1.0,
       "style": {
-        "type": "simple",
-        "paint": {
-          "circle-color": [
-            "get",
-            "marker-color"
-          ],
-          "circle-radius": [
-            "get",
-            "marker-size"
-          ],
-          "circle-stroke-color": "#FFFFFF",
-          "circle-stroke-width": 2
-        }
+        "circleColor": "#8B0000",
+        "circleRadius": 12,
+        "circleStrokeColor": "#FFFFFF",
+        "circleStrokeWidth": 2
       }
     }
   ]
